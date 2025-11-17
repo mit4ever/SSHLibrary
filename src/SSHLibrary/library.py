@@ -16,6 +16,8 @@
 from __future__ import print_function
 
 import re
+import re
+import os
 
 from .logger import logger
 
@@ -38,8 +40,7 @@ from .version import VERSION
 from paramiko import Transport, SFTPClient
 from paramiko import RSAKey
 from types import SimpleNamespace
-import datetime
-
+from datetime import datetime
 __version__ = VERSION
 
 class SSHLibrary(object):
