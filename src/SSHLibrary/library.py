@@ -38,6 +38,7 @@ from .version import VERSION
 from paramiko import Transport, SFTPClient
 from paramiko import RSAKey
 from types import SimpleNamespace
+import datetime
 
 __version__ = VERSION
 
