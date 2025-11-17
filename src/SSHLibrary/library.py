@@ -15,21 +15,23 @@
 
 from __future__ import print_function
 
-from datetime import datetime
 import re
-import os
-from robot.api.deco import keyword, library
-try:
-    from robot.api import logger
-except ImportError:
-    logger = None
 
+from .logger import logger
+
+from robot.utils import is_string, is_truthy, plural_or_not
+from robot.api.deco import keyword, library
 from .sshconnectioncache import SSHConnectionCache
-from .abstractclient import SSHClientException
+from .client import SSHClientException
 from .client import SSHClient
-from .config import (Configuration, IntegerEntry, LogLevelEntry, NewlineEntry,
-                     StringEntry, TimeEntry)
-from .utils import ConnectionCache, is_string, is_truthy, plural_or_not
+from .config import (
+    Configuration,
+    IntegerEntry,
+    LogLevelEntry,
+    NewlineEntry,
+    StringEntry,
+    TimeEntry,
+)
 from .version import VERSION
 
 # --- Thêm import cần thiết cho SFTP-only ---
