@@ -18,7 +18,7 @@ from __future__ import print_function
 from datetime import datetime
 import re
 import os
-from .deco import keyword
+from robot.api.deco import keyword, library
 try:
     from robot.api import logger
 except ImportError:
